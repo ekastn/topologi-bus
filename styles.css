@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "VT323";
+  src: url("https://fonts.cdnjs.com/css2?family=VT323");
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Courier New", monospace;
+  background-color: #000000;
+  color: #00ff00;
+}
+
+#simulation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #001100;
+  padding: 20px;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.simulation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 10px;
+}
+
+.status-panel {
+  background-color: #001800;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #002200;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #00ff00;
+  color: #000000;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.log-section {
+  flex: 1;
+  background-color: #001800;
+  border: 1px solid #00ff00;
+  padding: 10px;
+}
+
+.log-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #00ff00;
+  text-transform: uppercase;
+}
+
+#event-log {
+  height: 200px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  color: #00ff00;
+  padding: 5px;
+  background-color: #001100;
+}
+
+.device-details {
+  position: absolute;
+  background: #001800;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  pointer-events: none;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border: 1px solid #004400;
+}
+
+/* Custom CRT effect */
+#canvas-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#canvas-container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 255, 0, 0.05) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+canvas {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.3));
+}
+
+h2 {
+  text-shadow: 0 0 10px #00ff00;
+  letter-spacing: 2px;
+}

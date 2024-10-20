@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="./p5.min.js"></script>
+    <title>Bus Topology Simulation</title>
+  </head>
+  <body>
+    <div id="simulation-container">
+      <div class="simulation-header">
+        <h2>█ BUS TOPOLOGY SIMULATION █</h2>
+        <div id="simulation-time"></div>
+      </div>
+
+      <div class="controls">
+        <button onclick="startSimulation()">▶ Start</button>
+        <button onclick="simulateDeviceFailure()">⚠ Device Failure</button>
+        <button onclick="simulateBackboneFailure()">⚡ Backbone Failure</button>
+        <button onclick="simulateCollision()">⚔ Force Collision</button>
+        <button onclick="resetSimulation()">↺ Reset</button>
+      </div>
+
+      <div id="canvas-container"></div>
+
+      <div class="log-section">
+        <div class="log-header">■ EVENT LOG</div>
+        <div id="event-log"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
